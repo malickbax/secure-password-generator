@@ -1,25 +1,25 @@
 // Assignment code here
-// WHEN user clicks the button to generate a password,
-// THEN user is presented with a series of prompts for password criteria
-// WHEN prompted for password criteria, user selects which criteria to include in the password
+
+// 1. When user clicks the button to generate a password, 
+// user is promted to choose the length of password between 8 and 128 characters
+
+// 2. After that, System prompts user to choose whether they want to include lowercase, 
+// uppercase, numeric, and/or special characters
+
+// 3. At least one character type should be selected means: If user answers no to lowercase, 
+// uppercase and numeric, then system automatically chooses yes on the special characters question.
+
+// 4. After all prompts are answered, a password w/ selected criteria is generated 
+// in an alert or written to the page
 
 
-// WHEN prompted for the length of the password
-// THEN user chooses a length of between 8 and 128 characters
 
 
 
-WHEN asked for character types to include in the password
-THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
 
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
 
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
 
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
+
 
 
 
