@@ -30,7 +30,7 @@
 
 // 4. After all prompts are answered, a password w/ selected criteria is generated 
 // in an alert or written to the page
-document.getElementById("password").value = randoSequence(generatePassword)("");
+document.getElementById("password").value = random(generatePassword)("");
 var generatePassword = document.querySelector("#generate");
 function generatePassword() {
   var passwordText = "";
@@ -39,12 +39,12 @@ function generatePassword() {
   if (lowercase) passwordText += random(allowed.lowercase = "abcdefghijklmnopqrstuvwxyz");
   if (num) passwordText += random(allowed.num = "0123456789");
   if (spec) passwordText += random(allowed.spec = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~");
-  
-  for (var i = passwordText.passwordLength; i < passwordLength; i++) passwordText += rando(rando(allowed).value);
+  for (var i = passwordText.passwordLength; i < passwordLength; i++) passwordText += random(random(allowed).value);
+  return passwordText
 }
-document.getElementById("password").value = randoSequence(password).join("");
+document.getElementById("password").value = random(password).join("");
 
-// Write password to the #password input
+// Password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -52,5 +52,5 @@ function writePassword() {
   passwordText.value = password;
 
 }
-// Add event listener to generate button
+// Event listener to generate button
 generateBtn.addEventListener("click", generatePassword);
